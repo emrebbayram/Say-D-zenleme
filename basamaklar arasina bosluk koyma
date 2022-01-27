@@ -1,0 +1,16 @@
+string EditString(string value)
+    {
+        int length = value.Length;
+        int bolunme = Mathf.FloorToInt((length - 1) / 3);
+        string a = "";
+        if (bolunme >= 1)
+        {
+            a = value.Substring(0, length - (bolunme * 3));
+            for (int i = bolunme; i > 0; i--)
+            {
+
+                a += " " + value.Substring(length - (i * 3), 3);
+            }
+        }
+        return a;
+    }
