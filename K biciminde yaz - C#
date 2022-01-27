@@ -1,0 +1,24 @@
+string EditString(string value)
+    {
+        string editted = value;
+        int length = editted.Length;
+        if (length >= 10)
+        {
+            string a = editted.Substring(0, length - 9);
+            string b = editted.Substring(length - 9, 1);
+            editted = a + "." + b + "b";
+        }
+        else if (length >= 7)
+        {
+            string a = editted.Substring(0, length - 6);
+            string b = editted.Substring(length - 6, 1);
+            editted = a + "." + b + "m";
+        }
+        else if (length >= 4)
+        {
+            string a = editted.Substring(0, length - 3);
+            string b = editted.Substring(length - 3, 1);
+            editted = a + "." + b + "k";
+        }
+        return editted;
+    }
